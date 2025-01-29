@@ -8,7 +8,7 @@ env:
     TF_CLOUD_ORGANIZATION: "position-pal"
     TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
     TF_WORKSPACE: "position-pal-terraform"
-    CONFIG_DIRECTORY: ./plan"
+    CONFIG_DIRECTORY: "./"
 
 jobs:
   terraform:
