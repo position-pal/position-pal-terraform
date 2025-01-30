@@ -1,12 +1,14 @@
 name: 'Terraform Plan'
 on:
     pull_request:
+        paths:
+        - 'plan/**'
 
 env:
-  TF_CLOUD_ORGANIZATION: "position-pal"
-  TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
-  TF_WORKSPACE: "position-pal-terraform"
-  CONFIG_DIRECTORY: "./"
+    TF_CLOUD_ORGANIZATION: "position-pal"
+    TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
+    TF_WORKSPACE: "position-pal-terraform"
+    CONFIG_DIRECTORY: "./"
 
 jobs:
   terraform:
@@ -19,7 +21,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Upload Configuration
+      - name: Upload Configuration 
         uses: hashicorp/tfc-workflows-github/actions/upload-configuration@v1.0.0
         id: plan-upload
         with:
