@@ -3,6 +3,8 @@ on:
     push:
         branches:
         - main
+        paths:
+        - 'plan/**'
   
 env:
     TF_CLOUD_ORGANIZATION: "position-pal"
