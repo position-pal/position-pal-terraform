@@ -1,7 +1,7 @@
 resource "helm_release" "rabbitmq" {
   name       = "rabbitmq"
   repository = "https://charts.bitnami.com/bitnami"
-  chart      = "rabbitmq"
+  chart      = "bitnami/rabbitmq"
   namespace  = "rabbitmq"
 
   create_namespace = true
