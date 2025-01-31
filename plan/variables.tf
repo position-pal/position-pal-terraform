@@ -1,6 +1,7 @@
 variable "do_token" {
   description = "DigitalOcean API token"
   type        = string
+  sensitive = true
 }
 
 variable "region" {
@@ -37,6 +38,18 @@ variable "k8s_count" {
   default = "2"
   type = number
   description = "The number of nodes in the default node pool"
+}
+
+variable "rabbitmq_username" {
+  default = "admin"
+  type = string
+  description = "The username for the RabbitMQ instance"  
+}
+
+variable "rabbitmq_password" {
+  type = string
+  description = "The password for the RabbitMQ instance"
+  sensitive = true
 }
 
 data "digitalocean_ssh_key" "terraform" {
