@@ -40,18 +40,6 @@ variable "k8s_count" {
   description = "The number of nodes in the default node pool"
 }
 
-variable "rabbitmq_username" {
-  default = "admin"
-  type = string
-  description = "The username for the RabbitMQ instance"  
-}
-
-variable "rabbitmq_password" {
-  type = string
-  description = "The password for the RabbitMQ instance"
-  sensitive = true
-}
-
 data "digitalocean_ssh_key" "terraform" {
   name = "position-pal"
 }
