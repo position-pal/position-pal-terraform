@@ -40,7 +40,7 @@ provider "helm" {
   }
 
   registry {
-    url = "oci://ghcr.io/position-pal"
+    url = "ghcr.io"
     username = var.github_username
     password = var.github_password
   }
