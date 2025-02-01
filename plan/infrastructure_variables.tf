@@ -1,3 +1,15 @@
+variable "github_username" {
+  description = "Username for ghcr"
+  type = string
+}
+
+variable "github_password" {
+  description = "Password for ghcr"
+  type = string
+  sensitive = true
+}
+
+
 variable "do_token" {
   description = "DigitalOcean API token"
   type        = string
