@@ -9,11 +9,11 @@ resource "helm_release" "user-service" {
 
     set {
         name = "jwtSecret"
-        value = val.jwt_secret
+        value = var.jwt_secret
     }
 
     set {
         name = "rabbitmq.password"
-        value = val.rabbitmq_password
+        value = var.rabbitmq_password
     }
 }
