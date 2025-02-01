@@ -38,4 +38,10 @@ provider "helm" {
     token                  = digitalocean_kubernetes_cluster.k8s_cluster_do.kube_config[0].token
     cluster_ca_certificate = base64decode(digitalocean_kubernetes_cluster.k8s_cluster_do.kube_config[0].cluster_ca_certificate)
   }
+
+  registry {
+    url = "oci://ghcr.io/position-pal"
+    username = var.github_username
+    password = var.github_password
+  }
 }
