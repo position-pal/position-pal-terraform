@@ -1,4 +1,4 @@
-resource "helm_release" "rabbitmq" {
+resource "helm_release" "user-service" {
     name = "user-service"
     repository = "ghcr.io/position-pal/"
     chart      = "position-pal-user-service"
