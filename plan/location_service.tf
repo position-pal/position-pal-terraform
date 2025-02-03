@@ -8,6 +8,11 @@ resource "helm_release" "location_service" {
   create_namespace = true
 
   set {
+    name = "rabbitmq.username"
+    value = var.rabbitmq_username
+  }
+
+  set {
     name = "rabbitmq.password"
     value = var.rabbitmq_password
   }
@@ -16,7 +21,6 @@ resource "helm_release" "location_service" {
     name = "mapboxApi"
     value = var.mapbox_key
   }
-  
   set {
     name = "akkaLicenseKey"
     value = var.akka_license_key

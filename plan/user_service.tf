@@ -13,6 +13,11 @@ resource "helm_release" "user-service" {
     }
 
     set {
+      name = "rabbitmq.username"
+      value = var.rabbitmq_username
+    }
+
+    set {
         name = "rabbitmq.password"
         value = var.rabbitmq_password
     }
