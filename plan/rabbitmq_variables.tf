@@ -1,5 +1,5 @@
 variable "rabbitmq_username" {
-  default = "admin"
+  default = "user"
   type = string
   description = "The username for the RabbitMQ instance"  
 }
