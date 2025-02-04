@@ -29,7 +29,7 @@ variable "k8s_clustername" {
 }
 
 variable "size" {
-  default = "s-4vcpu-8gb-intel"
+  default = "s-4vcpu-8gb-240gb-intel"
   type = string
   description = "The size of the nodes in the cluster"
 }
@@ -47,7 +47,7 @@ variable "k8s_poolname" {
 }
 
 variable "k8s_count" {
-  default = "3"
+  default = "4"
   type = number
   description = "The number of nodes in the default node pool"
 }
