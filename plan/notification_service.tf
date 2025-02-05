@@ -3,7 +3,7 @@ resource "helm_release" "notification_service" {
   repository = "oci://ghcr.io/position-pal/"
   chart      = "position-pal-notification-service"
   namespace  = "pp-ns"
-  version = "1.1.0"
+  version = "1.0.0"
 
   create_namespace = true
 
