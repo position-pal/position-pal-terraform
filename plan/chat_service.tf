@@ -21,4 +21,6 @@ resource "helm_release" "chat_service" {
     name = "akkaLicenseKey"
     value = var.akka_license_key
   }
+
+  depends_on = [ helm_release.rabbitmq ]
 }
