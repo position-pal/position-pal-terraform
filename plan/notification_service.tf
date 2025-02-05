@@ -7,6 +7,12 @@ resource "helm_release" "notification_service" {
 
   create_namespace = true
 
+  values = [
+    yamlencode({
+      serviceAccount = jsondecode(var.service_account)
+    })
+  ]
+
   set {
     name = "rabbitmq.username"
     value = var.rabbitmq_username
@@ -15,11 +21,6 @@ resource "helm_release" "notification_service" {
   set {
     name = "rabbitmq.password"
     value = var.rabbitmq_password
-  }
-
-  set {
-    name = "serviceAccount"
-    value = var.service_account
   }
 
   depends_on = [ helm_release.rabbitmq ]
