@@ -9,7 +9,7 @@ resource "helm_release" "notification_service" {
 
   values = [
     yamlencode({
-      serviceAccount = jsondecode(var.service_account)
+      serviceAccount = var.service_account
     })
   ]
 
