@@ -21,4 +21,6 @@ resource "helm_release" "user-service" {
         name = "rabbitmq.password"
         value = var.rabbitmq_password
     }
+
+    depends_on = [ helm_release.rabbitmq ]
 }

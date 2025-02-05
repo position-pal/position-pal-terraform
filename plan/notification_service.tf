@@ -1,8 +1,8 @@
-resource "helm_release" "location_service" {
-  name       = "location-service"
+resource "helm_release" "notification_service" {
+  name       = "notification-service"
   repository = "oci://ghcr.io/position-pal/"
-  chart      = "position-pal-location-service"
-  namespace  = "pp-ls"
+  chart      = "position-pal-notification-service"
+  namespace  = "pp-ns"
   version = "1.1.0"
 
   create_namespace = true
@@ -18,13 +18,8 @@ resource "helm_release" "location_service" {
   }
 
   set {
-    name = "mapboxApi"
-    value = var.mapbox_key
-  }
-  
-  set {
-    name = "akkaLicenseKey"
-    value = var.akka_license_key
+    name = "serviceAccount"
+    value = var.service_account
   }
 
   depends_on = [ helm_release.rabbitmq ]
