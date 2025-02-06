@@ -35,7 +35,7 @@ variable "size" {
 }
 
 variable "k8s_version" {
-  default = "1.31.1-do.5"
+  default = "1.32.1-do.0"
   type = string
   description = "The version of Kubernetes to use"
 }
