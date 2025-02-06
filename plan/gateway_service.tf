@@ -4,9 +4,8 @@ resource "helm_release" "gateway_service" {
   chart      = "position-pal-gateway-service"
   namespace  = "pp-gws"
   version = "1.0.0"
-
   
-
+  
   depends_on = [ 
     helm_release.chat_service,
     helm_release.location_service,
@@ -14,5 +13,5 @@ resource "helm_release" "gateway_service" {
     helm_release.user-service
  ]
 
-
+ 
 }
