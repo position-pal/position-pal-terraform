@@ -4,6 +4,8 @@ resource "helm_release" "prometheus_grafana" {
   chart      = "kube-prometheus-stack"
   namespace  = "monitoring"
   version    = "69.2.0"
+
+  create_namespace = true
   
   set {
     name  = "grafana.adminUser"
