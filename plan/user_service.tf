@@ -1,4 +1,4 @@
-resource "helm_release" "user-service" {
+resource "helm_release" "user_service" {
     name = "user-service"
     repository = "oci://ghcr.io/position-pal/"
     chart      = "position-pal-user-service"

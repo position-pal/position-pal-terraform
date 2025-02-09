@@ -36,6 +36,6 @@ resource "helm_release" "gateway_service" {
     helm_release.chat_service,
     helm_release.location_service,
     helm_release.notification_service,
-    helm_release.user-service
+    helm_release.user_service
     ]
 }
