@@ -3,7 +3,7 @@ resource "helm_release" "location_service" {
   repository = "oci://ghcr.io/position-pal/"
   chart      = "position-pal-location-service"
   namespace  = "pp-ls"
-  version = "1.1.0"
+  version = "1.7.0"
 
   create_namespace = true
 
