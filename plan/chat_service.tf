@@ -3,7 +3,7 @@ resource "helm_release" "chat_service" {
   repository = "oci://ghcr.io/position-pal/"
   chart      = "position-pal-chat-service"
   namespace  = "pp-cs"
-  version = "1.0.2"
+  version = "1.4.0"
 
   create_namespace = true
 
