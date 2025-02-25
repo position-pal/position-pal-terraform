@@ -16,6 +16,16 @@ resource "helm_release" "chat_service" {
     name = "rabbitmq.password"
     value = var.rabbitmq_password
   }
+
+  set {
+    name = "rabbitmq.namespace"
+    value = "rabbitmq"
+  }
+
+  set {
+    name = "rabbitmq.serviceName"
+    value = "rabbitmq"
+  }
   
   set {
     name = "akkaLicenseKey"

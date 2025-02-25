@@ -18,6 +18,16 @@ resource "helm_release" "location_service" {
   }
 
   set {
+    name = "rabbitmq.namespace"
+    value = "rabbitmq"
+  }
+
+  set {
+    name = "rabbitmq.serviceName"
+    value = "rabbitmq"
+  }
+  
+  set {
     name = "mapboxApi"
     value = var.mapbox_key
   }
