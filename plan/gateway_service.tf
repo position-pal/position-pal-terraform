@@ -8,27 +8,27 @@ resource "helm_release" "gateway_service" {
   create_namespace = true
   
   set {
-    name = "config.chatServiceGrpcUrl"
+    name = "chatServiceGrpcUrl"
     value = "chat-service.pp-cs:5052"
   }
   set {
-    name = "config.chatServiceHttpUrl"
+    name = "chatServiceHttpUrl"
     value = "chat-service.pp-cs:8080"
   }
   set {
-    name = "config.locationServiceHttpUrl"
+    name = "locationServiceHttpUrl"
     value = "location-service.pp-ls:8080"
   }
   set {
-    name = "config.locationServiceGrpcUrl"
+    name = "locationServiceGrpcUrl"
     value = "location-service.pp-ls:5052"
   }
   set {
-    name = "config.userServiceGrpcUrl"
+    name = "userServiceGrpcUrl"
     value = "user-service.pp-us:5052"
   }
   set {
-    name = "config.notificationServiceGrpcUrl"
+    name = "notificationServiceGrpcUrl"
     value = "notification-service.pp-ns:5052"
   }
 
