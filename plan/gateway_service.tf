@@ -3,11 +3,7 @@ resource "helm_release" "gateway_service" {
   repository = "oci://ghcr.io/position-pal/"
   chart      = "position-pal-gateway-service"
   namespace  = "pp-gws"
-<<<<<<< HEAD
   version = "1.17.0"
-=======
-  version = "1.16.0"
->>>>>>> main
   
   create_namespace = true
   
@@ -34,6 +30,11 @@ resource "helm_release" "gateway_service" {
   set {
     name = "notificationServiceGrpcUrl"
     value = "notification-service.pp-ns:5052"
+  }
+
+  set {
+    name = "outputPort"
+    value = 3000
   }
 
   depends_on = [ 
