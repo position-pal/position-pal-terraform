@@ -32,6 +32,11 @@ resource "helm_release" "gateway_service" {
     value = "notification-service.pp-ns:5052"
   }
 
+  set {
+    name = "outputPort"
+    value = 3000
+  }
+
   depends_on = [ 
     helm_release.chat_service,
     helm_release.location_service,
