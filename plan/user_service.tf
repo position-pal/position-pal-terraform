@@ -2,7 +2,7 @@ resource "helm_release" "user_service" {
     name = "user-service"
     repository = "oci://ghcr.io/position-pal/"
     chart      = "position-pal-user-service"
-    version    = "1.11.0"
+    version    = "1.13.0"
     namespace  = "pp-us"
 
     create_namespace = true
