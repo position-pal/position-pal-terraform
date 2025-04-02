@@ -3,7 +3,7 @@ resource "helm_release" "prometheus_grafana" {
   repository = "https://prometheus-community.github.io/helm-charts"
   chart      = "kube-prometheus-stack"
   namespace  = "monitoring"
-  version    = "70.0.2"
+  version    = "70.4.1"
 
   create_namespace = true
   
