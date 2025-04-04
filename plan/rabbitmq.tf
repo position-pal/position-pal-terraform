@@ -3,7 +3,7 @@ resource "helm_release" "rabbitmq" {
   repository = "oci://registry-1.docker.io/bitnamicharts"
   chart      = "rabbitmq"
   namespace  = "rabbitmq"
-  version = "15.2.4"
+  version = "15.5.0"
 
   create_namespace = true
 
